@@ -38,9 +38,9 @@ CREATE A FUNCTION THAT RETURNS THE STRING 'hello world'
 */
 
 function helloWorld() {
-  // YOUR CODE HERE
+  return "hello world";
 }
-
+console.log("hello World")
 /*
 QUESTION 3
 
@@ -69,9 +69,14 @@ concatQuestion('blake') ===> 'hello blake'
 */
 
 function concatQuestion(str) {
-  // YOUR CODE HERE
+  if(str) {
+    return 'hello' + ' ' + str
+  }
+  return 'hello'
 }
+var helloThere = concatQuestion('blake')
 
+console.log(helloThere)
 /*
 QUESTION 5
 
