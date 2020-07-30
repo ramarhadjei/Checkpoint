@@ -36,6 +36,7 @@ function firstFunction() {
   return false;
 }
 }
+firstFunction(7)
 
 /*
 QUESTION 2
