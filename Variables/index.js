@@ -39,7 +39,7 @@ Assign it to a BOOLEAN data type
 
 var mySecondVariable;
 
- mySecondVariable = true
+ mySecondVariable = false;
 
 /*
 QUESTION 3
@@ -50,7 +50,7 @@ ASSIGN mythirdVar to equal to a string with the text ==>  hello world
 
 var myThirdVar;
 
-myThirdVar = "hello World";
+myThirdVar = "hello world";
 
 /*
 QUESTION 4
@@ -61,7 +61,7 @@ ASSIGN myFourthVar to equal to a string with the text ==> This Is Case Sensitive
 
 var myFourthVar;
 
-myFourthVar = "This Is Case Sensitive "
+myFourthVar = "This Is Case Sensitive ";
 
 /*
 QUESTION 5
@@ -85,9 +85,7 @@ i.e. + - / *
 
 */
 
-var myAgeCalc = null;
-
-myAgeCalc = (100+100/2)+6;
+myAgeCalc = (200/2)-50+6;
 
 /*
 QUESTION 7 (THE LAST QUESTION)
@@ -103,7 +101,7 @@ refer to lecutre about expressions
 
 var numExpression;
 
-1
+numExpression = 24;
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH
