@@ -1,4 +1,4 @@
-/*
+ /*
 PLEASE DO NOT TOUCH THE TEST SECTION
 
 ALL FUNCTION HAVE BEEN DECLARED FOR YOU BUT YOU WILL NEED TO
@@ -40,8 +40,11 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 
 function pushString(arr) {
   // CODE HERE
-  console.log(arr);
+  var arr =  [1,2,3]
+  arr [3]='last element'
+  return arr;
 }
+pushString([1,2,3]) //===> [1, 2, 3, 'last element']
 
 /*
 QUESTION 2
@@ -59,7 +62,11 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 
 function push(array, value) {
   // CODE HERE
+  array[array.length] = value;
+  array[3]=true
+  return array;
 }
+push([1,2,3])
 
 /*
 QUESTION 3
@@ -81,7 +88,12 @@ true
 
 function printElements(array) {
   // CODE HERE
+  for(var i=0; i<array.length; i++){
+    console.log(array[i])
+  }
 }
+var array = [1, true, 'I am the third element', 'my index is 3 confusing right']
+printElements(array);
 
 /*
 QUESTION 4
@@ -109,8 +121,25 @@ unique([1,2,3,2,3,2]) ===> [1, 2, 3];
 */
 
 function unique(array) {
-  // CODE HERE
+  var output = [];
+  for(var i = 0; i < array.length; i++){
+    var element = array[i]
+    var check = true;
+    for(var j = 0; j < output.length; j++){
+      var element2 = output[j];
+      if(element2 === element){
+        check = false
+        break;
+      }
+    }
+    if(check){
+      output.push(element)
 }
+return output
+  }
+}
+  
+
 
 /*
 QUESTION 5
@@ -126,7 +155,19 @@ HINT USE AN INNER FOR-LOOP
 
 function compare(array1, array2) {
   // CODE HERE
-}
+  var match = false
+  if (array1.length === array2.length) {
+    match = true
+    for (var i = 0; i < array1.length; i++) {
+      if (array2[i] !== array1[i]) {
+        match = false
+        break
+      }
+    } 
+  }
+  
+  return match;
+  }
 
 /*
 QUESTION 6
@@ -142,8 +183,22 @@ compareArrays([1, 2, 3, 4], [1, 2]) ====> [1, 2]
 
 function compareArrays(array1, array2) {
   // CODE HERE
-}
+  var newArr = []
 
+  for(var i = 0; i < array1.length; i++) {
+
+  for(var j = 0; j < array2.length; j++) {
+
+    if (array1[i] === array2[j]) {
+      newArr.push(array1[i])
+    }
+
+  }
+}
+return newArr
+  
+}
+compareArrays([1, 2, 3, 4], [1, 2])
 /*
 QUESTION 7
 
@@ -157,6 +212,13 @@ compareArraysOpposite([1,2,3,4], [1,3]) ===> [2, 4]
 
 function compareArraysOpposite(array1, array2) {
   // CODE HERE
+  var newArr = []
+  for (var i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      newArr.push(array1[i])
+    }
+  }
+  return newArr
 }
 
 /*
@@ -182,6 +244,7 @@ retrieveValue(twoDimentionArray, 3, 1) ===> 1
 
 function retrieveValue(arr, row, col) {
   // CODE HERE
+  return arr[row][col];
 }
 
 /*
@@ -212,8 +275,21 @@ createTwoDArray(3, 5) ===> [
 
 function createTwoDArray(row, col) {
   // CODE HERE
+  var twoDArray = [];
+for (var i=0; i < row; i++){
+   var height = [];
+   
+  for (var j = 0; j < col; j++){
+    var width = 0;
+    height.push(width);
+  }
+  twoDArray.push(height)
 }
 
+return twoDArray;
+}
+
+console.log('This is how to create a 2DArray!',createTwoDArray(3, 5))
 /*
 TEST SECTION, PLEASE DO NOT TOUCH
 

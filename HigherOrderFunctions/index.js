@@ -57,6 +57,10 @@ USE A FOR-LOOP
 
 function map(array, callback) {
   // CODE HERE
+  var output = [];
+  for(var i=0; i<array.length; i++){
+    
+  }
 }
 
 /*

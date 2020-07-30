@@ -21,6 +21,14 @@ IT ALSO HAS ANOTHER PROPERTY type THAT EQUALS THE STRING 'parent class'
 
 function MyFirstClass(name) {
   // CODE HERE
+  this.children =[];
+  this.cry = function(){
+    console.log("parent class");
+  }
+  this.name =name;
+}
+MyFirstClass.prototype.makeChildren = function(){
+  this.children.push(new MyFirstClass(this.name + ' babychild'));
 }
 
 /*
