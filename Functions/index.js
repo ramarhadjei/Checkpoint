@@ -17,7 +17,9 @@ CREATE A FUNCTION THAT RETURNS THE BOOLEAN true
 
 */
 
-function example() {}
+function example() {
+  return true;
+}
 
 /*
 QUESTION 1
@@ -34,7 +36,7 @@ function firstFunction() {
   return false;
 }
 }
-firstFunction(7)
+
 /*
 QUESTION 2
 
