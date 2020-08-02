@@ -21,15 +21,10 @@ IT ALSO HAS ANOTHER PROPERTY type THAT EQUALS THE STRING 'parent class'
 
 function MyFirstClass(name) {
   // CODE HERE
-  this.children =[];
-  this.cry = function(){
-    console.log("parent class");
+  this.name=name;
   }
-  this.name =name;
-}
-MyFirstClass.prototype.makeChildren = function(){
-  this.children.push(new MyFirstClass(this.name + ' babychild'));
-}
+  var watchme = new MyFirstClass('parent class');
+  console.log(watchme);
 
 /*
 QUESTION 2
@@ -39,6 +34,9 @@ USING THE PROTOTYPE CHAIN, ADD THE METHOD getNumberOfChars THAT JUST RETURNS THE
 */
 
 // CODE HERE
+MyFirstClass.prototype.getNumberOfChars = function(){
+return Object.values(this.name).length
+}
 
 /*
 QUESTION 3
@@ -52,6 +50,7 @@ REMEMBER TO USE THE METHOD call AND FEED this AS THE FIRST ARGUMENT
 
 function MySecondClass(name) {
   // CODE HERE
+  MyFirstClass.call(this.name);
 }
 
 /*
@@ -65,6 +64,9 @@ YOU MAY WANT TO LINK THE PROTOTYPICAL CHAINS AND USE Object.create
 */
 
 // CODE HERE
+MySecondClass.prototype.getNumberOfChars = function(){
+  return Object.values(this.name).length
+}
 
 /*
 QUESTION 5
@@ -75,6 +77,7 @@ MAKE SURE THE CONSTRUCTOR FUNCTION FOR MySecondClass's INSTANCE IS INDEED MySeco
 */
 
 // CODE HERE
+console.log(MySecondClass);
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH
